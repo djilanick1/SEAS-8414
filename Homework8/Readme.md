@@ -100,10 +100,14 @@ Homework8-SOAR/
 │       └── lint.yml             # For GitHub Actions
 ├── .streamlit/
 │   └── secrets.toml
-├── app/
+├── base_app/
 │   ├── app.py                   # UI and main orchestrator
 │   ├── genai_prescriptions.py   # Prescriptive engine
 │   └── train_model.py           # Predictive engine
+├── updated_app/
+│   ├── updated_app.py                   # UI and main orchestrator
+│   ├── updated_genai_prescriptions.py   # Prescriptive engine
+│   └── updated_train_model.py           # Predictive engine
 ├── docker/
 │   └── Dockerfile               # Container definition
 ├── docs/
