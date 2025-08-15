@@ -10,3 +10,18 @@
   . [ ] Build input sidebar.
   . [ ] Orchestrate the prediction/prescription workflow.
   . [ ] Design output tabs for results.
+
+
+### Project Structure
+Homework8/
+├── .github/workflows/   # For GitHub Actions
+├── README.md            # Project overview
+├── INSTALL.md           # Installation guide
+├── TESTING.md           # How to test
+├── Makefile             # Command shortcuts
+├── docker-compose.yml   # Docker orchestration
+├── Dockerfile           # Container definition
+├── requirements.txt     # Python libraries
+├── train_model.py       # Predictive engine
+├── genai_prescriptions.py # Prescriptive engine
+└── app.py               # UI and main orchestrator
