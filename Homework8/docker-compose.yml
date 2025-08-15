@@ -1,11 +1,11 @@
 services:
-  mini-soar-app:
+  homework8-soar-app:
     build: .
-    container_name: mini-soar
+    container_name: homework8-soar
     ports:
-      - "8501:8501"
+      - "9001:9001"
     volumes:
       # Mount the entire project directory for instant code changes
       - .:/app
     # CORRECTED COMMAND: Points to app.py in the root of the /app directory
-    command: /bin/sh -c "python train_model.py && streamlit run app.py --server.fileWatcherType none"
+    command: /bin/sh -c "python updated_train_model.py && streamlit run updated_app.py --server.fileWatcherType none"
