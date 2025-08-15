@@ -1,4 +1,7 @@
 # Homework8-SOAR
+## Overview
+This project, named Homework8-SOAR, is organized to follow a SOAR (Sense, Orchestrate, Act, Respond) architecture. It combines a predictive engine for data-driven insights with a prescriptive engine powered by Generative AI to provide actionable recommendations. The user interface, built with Streamlit, orchestrates this workflow and presents the results. The project uses Docker and Make for streamlined development and deployment.
+
 
 ## Project Roadmap
 
@@ -41,3 +44,5 @@ Homework8-SOAR/
 ├── Makefile                     # Command shortcuts
 ├── README.md                    # Project overview
 └── requirements.txt             # Python libraries
+
+
