@@ -1,5 +1,5 @@
 ### Project Roadmap
-1. [x] Environment: Define Dockerfile, docker-compose.yml, Makefile.
+1. [ ] Environment: Define Dockerfile, docker-compose.yml, Makefile.
 2. [ ] Predictive Engine (train_model.py):
   . [ ] Create synthetic data generator.
   . [ ] Integrate PyCaret to train and save the model.
