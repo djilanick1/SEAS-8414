@@ -21,7 +21,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port that Streamlit runs on
-EXPOSE 8501
+EXPOSE 9001
 
 # The CMD to start the application is located in the docker-compose.yml file
 # for better development/production flexibility.
