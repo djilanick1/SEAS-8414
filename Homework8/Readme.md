@@ -12,16 +12,26 @@
   . [ ] Design output tabs for results.
 
 
-### Project Structure
-Homework8/
-├── .github/workflows/   # For GitHub Actions
-├── README.md            # Project overview
-├── INSTALL.md           # Installation guide
-├── TESTING.md           # How to test
-├── Makefile             # Command shortcuts
-├── docker-compose.yml   # Docker orchestration
-├── Dockerfile           # Container definition
-├── requirements.txt     # Python libraries
-├── train_model.py       # Predictive engine
-├── genai_prescriptions.py # Prescriptive engine
-└── app.py               # UI and main orchestrator
+              
+Homework8-SOAR/
+├── .github/
+│   └── workflows/
+│       └── lint.yml                   # For GitHub Actions
+├── .streamlit/
+│   └── secrets.toml
+├── app/
+│   ├── app.py                        # UI and main orchestrator
+│   ├── genai_prescriptions.py        # Prescriptive engine
+│   └── train_model.py                # Predictive engine
+├── docker/
+│   └── Dockerfile                    # Container definition
+├── docs/
+│   ├── INSTALL.md                    # Installation guide
+│   └── TESTING.md                    # How to test
+├── models/
+├── .dockerignore
+├── .gitignore
+├── docker-compose.yml                # Docker orchestration
+├── Makefile                          # Command shortcuts
+├── README.md                         # Project overview
+└── requirements.txt                  # Python libraries
