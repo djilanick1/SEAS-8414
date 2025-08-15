@@ -27,17 +27,17 @@ build:
 
 # Create and start containers. Includes '--build' to ensure images are up-to-date.
 up:
-	@echo "Starting Mini-SOAR application using '$(COMPOSE_CMD)'..."
+	@echo "Starting Homework8-SOAR application using '$(COMPOSE_CMD)'..."
 	@$(COMPOSE_CMD) up --build -d
 	@echo ""
 	@echo "Application is starting up in detached mode."
 	@echo "View logs with: make logs"
-	@echo "Access the app at: http://localhost:8501"
+	@echo "Access the app at: http://localhost:9001"
 
 
 # Stop and remove containers, networks, and volumes created by 'up'.
 down:
-	@echo "Stopping Mini-SOAR application using '$(COMPOSE_CMD)'..."
+	@echo "Stopping Homework8-SOAR application using '$(COMPOSE_CMD)'..."
 	@$(COMPOSE_CMD) down
 
 # Follow the real-time logs from the application service.
