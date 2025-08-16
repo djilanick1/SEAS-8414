@@ -10,8 +10,8 @@ import time
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="GenAI-Powered Phishing SOAR",
-    page_icon="🛡️",
+    page_title="Homework8 GenAI-Powered Phishing SOAR",
+    page_icon="",
     layout="wide"
 )
 
@@ -52,7 +52,7 @@ if not model or not cluster_model:
 
 # --- Sidebar for Inputs ---
 with st.sidebar:
-    st.title("🔬 URL Feature Input")
+    st.title("URL Feature Input")
     st.write("Describe the characteristics of a suspicious URL below.")
 
     # Using a dictionary to hold form values
@@ -71,10 +71,10 @@ with st.sidebar:
 
     st.divider()
     genai_provider = st.selectbox("Select GenAI Provider", ["Gemini", "OpenAI", "Grok"])
-    submitted = st.button("💥 Analyze & Initiate Response", use_container_width=True, type="primary")
+    submitted = st.button("Analyze & Initiate Response", use_container_width=True, type="primary")
 
 # --- Main Page ---
-st.title("🛡️ GenAI-Powered SOAR for Phishing URL Analysis")
+st.title("Homework8 GenAI-Powered SOAR for Phishing URL Analysis")
 
 if not submitted:
     st.info("Please provide the URL features in the sidebar and click 'Analyze' to begin.")
@@ -119,45 +119,45 @@ else:
 
     # --- Analysis Workflow ---
     with st.status("Executing SOAR playbook...", expanded=True) as status:
-        st.write("▶️ **Step 1: Predictive Analysis** - Running features through classification model.")
+        st.write(" **Step 1: Predictive Analysis** - Running features through classification model.")
         time.sleep(1)
         prediction = predict_model(model, data=input_data)
         is_malicious = prediction['prediction_label'].iloc[0] == 1
 
         verdict = "MALICIOUS" if is_malicious else "BENIGN"
-        st.write(f"▶️ **Step 2: Verdict Interpretation** - Model predicts **{verdict}**.")
+        st.write(f" **Step 2: Verdict Interpretation** - Model predicts **{verdict}**.")
         time.sleep(1)
         
         threat_profile_prediction = "None"
         if is_malicious:
-            st.write(f"▶️ **Step 3: Threat Attribution** - Running features through clustering model.")
+            st.write(f" **Step 3: Threat Attribution** - Running features through clustering model.")
             time.sleep(1)
             # Make sure to drop the 'label' column if it exists and predict
             cluster_prediction = predict_cluster_model(cluster_model, data=input_data.drop(['double_slash_redirecting', 'URL_of_Anchor', 'Links_in_tags', 'SFH'], axis=1))
             threat_profile_prediction = f"Cluster {cluster_prediction['Cluster'].iloc[0]}"
-            st.write(f"▶️ **Step 4: Prescriptive Analytics** - Engaging **{genai_provider}** for action plan.")
+            st.write(f" **Step 4: Prescriptive Analytics** - Engaging **{genai_provider}** for action plan.")
             try:
                 # Add the threat profile to the details sent to the GenAI model
                 alert_details = {**input_dict, 'threat_profile': threat_profiles[threat_profile_prediction]['name']}
                 prescription = generate_prescription(genai_provider, alert_details)
-                status.update(label="✅ SOAR Playbook Executed Successfully!", state="complete", expanded=False)
+                status.update(label=" SOAR Playbook Executed Successfully!", state="complete", expanded=False)
             except Exception as e:
                 st.error(f"Failed to generate prescription: {e}")
                 prescription = None
-                status.update(label="🚨 Error during GenAI prescription!", state="error")
+                status.update(label=" Error during GenAI prescription!", state="error")
         else:
             prescription = None
-            status.update(label="✅ Analysis Complete. No threat found.", state="complete", expanded=False)
+            status.update(label=" Analysis Complete. No threat found.", state="complete", expanded=False)
 
     # --- Tabs for Organized Output ---
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 **Analysis Summary**", "📈 **Visual Insights**", "📜 **Prescriptive Plan**", "👤 **Threat Attribution**"])
+    tab1, tab2, tab3, tab4 = st.tabs([" **Analysis Summary**", " **Visual Insights**", " **Prescriptive Plan**", " **Threat Attribution**"])
 
     with tab1:
         st.subheader("Verdict and Key Findings")
         if is_malicious:
-            st.error("**Prediction: Malicious Phishing URL**", icon="🚨")
+            st.error("**Prediction: Malicious Phishing URL**", icon="")
         else:
-            st.success("**Prediction: Benign URL**", icon="✅")
+            st.success("**Prediction: Benign URL**", icon="")
 
         st.metric("Malicious Confidence Score",
                   f"{prediction['prediction_score'].iloc[0]:.2%}" if is_malicious else f"{1 - prediction['prediction_score'].iloc[0]:.2%}")
@@ -177,7 +177,7 @@ else:
     with tab3:
         st.subheader("Actionable Response Plan")
         if prescription:
-            st.success("A prescriptive response plan has been generated by the AI.", icon="🤖")
+            st.success("A prescriptive response plan has been generated by the AI.", icon="")
             st.json(prescription, expanded=False)  # Show the raw JSON for transparency
 
             st.write("#### Recommended Actions (for Security Analyst)")
@@ -194,9 +194,9 @@ else:
         if is_malicious:
             profile = threat_profiles.get(threat_profile_prediction)
             if profile:
-                st.info(f"The URL is likely associated with the **{profile['name']}** threat profile.", icon="👤")
+                st.info(f"The URL is likely associated with the **{profile['name']}** threat profile.", icon="")
                 st.markdown(profile['description'])
             else:
-                st.warning("Could not determine a threat actor profile.", icon="⚠️")
+                st.warning("Could not determine a threat actor profile.", icon="")
         else:
             st.info("Threat attribution is only performed on malicious URLs.")
