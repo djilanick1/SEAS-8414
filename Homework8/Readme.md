@@ -32,19 +32,20 @@ Before you begin, ensure you have the following installed on your system:
 2.  **Configure API Keys**
     This is the most important step. The application reads API keys from a `secrets.toml` file.
 
-    -   Create the directory and file:
+    -   Create the directory and file if doesn't exist; technically it should be there if git clone was performed
         ```bash
         mkdir -p .streamlit
         touch .streamlit/secrets.toml
         ```
     -   Open `.streamlit/secrets.toml` and add your API keys. Use the following template:
         ```toml
-        # .streamlit/secrets.toml
+        # vim or vi .streamlit/secrets.toml
         OPENAI_API_KEY = "sk-..."
         GEMINI_API_KEY = "AIza..."
         GROK_API_KEY = "gsk_..."
         ```
         *You only need to provide a key for the service(s) you intend to use.*
+        # :qw to save
 
 ## Running the Application
 
