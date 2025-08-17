@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed on your system:
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/djilanick1/SEAS-8414.git]
+    git clone https://github.com/djilanick1/SEAS-8414.git
     cd Homework8
     ```
 
