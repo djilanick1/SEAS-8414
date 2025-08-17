@@ -109,8 +109,7 @@ Homework8-SOAR/
 │   ├── updated_app.py                   # UI and main orchestrator
 │   ├── updated_genai_prescriptions.py   # Prescriptive engine
 │   └── updated_train_model.py           # Predictive engine
-├── docker/
-│   └── Dockerfile               # Container definition
+├── Dockerfile               # Container definition
 ├── docs/
 │   ├── INSTALL.md               # Installation guide
 │   └── TESTING.md               # How to test
