@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from pycaret.classification import load_model, predict_model
 from pycaret.clustering import load_model as load_cluster_model, predict_model as predict_cluster_model
-from genai_prescriptions import generate_prescription
+from updated_genai_prescriptions import generate_prescription
 import os
 import time
 
