@@ -3,7 +3,7 @@ services:
     build: .
     container_name: homework8-soar
     ports:
-      - "9001:9001"
+      - "9001:8501"  # Map host port 9001 to the application's port 8501 inside the container
     volumes:
       # Mount the entire project directory for instant code changes
       - .:/app
