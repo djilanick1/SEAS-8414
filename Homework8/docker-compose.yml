@@ -6,6 +6,6 @@ services:
       - "9001:9001"
     volumes:
       # Mount the entire project directory for instant code changes
-      - .:/updated_app
+      - .:/app
     # CORRECTED COMMAND: Points to app.py in the root of the /app directory
     command: /bin/sh -c "python updated_train_model.py && streamlit run updated_app.py --server.fileWatcherType none"
