@@ -45,7 +45,7 @@ Before you begin, ensure you have the following installed on your system:
         GROK_API_KEY = "gsk_..."
         ```
         *You only need to provide a key for the service(s) you intend to use.*
-        # :qw to save
+    
 
 ## Running the Application
 
