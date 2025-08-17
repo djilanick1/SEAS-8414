@@ -57,7 +57,7 @@ With the `Makefile`, running the application is simple.
     The first time you run this, it will download the necessary Docker images and build the application container. This may take a few minutes. Subsequent runs will be much faster.
 
 -   Once it's running, open your web browser and go to:
-    **[http://localhost:8501](http://localhost:8501)**
+    **[http://localhost:8501](http://localhost:9001)**
 
 -   **To view the application logs:**
     ```bash
