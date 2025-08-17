@@ -1,4 +1,4 @@
-# Makefile for managing the Mini-SOAR application lifecycle.
+# Makefile for managing the Homework8-SOAR application lifecycle.
 # It automatically detects whether to use 'docker-compose' or 'docker compose'.
 
 # --- Automatic Command Detection ---
