@@ -8,9 +8,9 @@ How to Run the Script
 - Execute the Script: Open your terminal and navigate to the app/ directory. Run the script using the following command:
 
 
-    ```bash
-python updated_train_model.py
-    ```bash
+```bash
+python updated_train_model.py 
+```
     
 Check the Output: After the script finishes running, you should find two new files in a newly created models/ subdirectory inside your app/ folder:
 
