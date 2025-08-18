@@ -4,6 +4,17 @@
 
 This project is a prototype Security Orchestration, Automation, and Response (SOAR) application built with Python. It uses a machine learning model to predict if a URL is malicious and leverages Generative AI to prescribe a response plan. The entire application is containerized with Docker and orchestrated with Docker Compose for easy setup and deployment.
 
+## Dual-Model Architecture
+
+1. **Classification Model (RandomForest)**:
+
+Input: URL features (SSL state, length, subdomains)
+Output: Malicious/Benign verdict
+
+2. **Clustering Model (K-Means)**:
+
+Input: Malicious URL features
+Output: Threat actor profile (APT, Cybercrime, Hacktivist)
 
 ## Features
 
