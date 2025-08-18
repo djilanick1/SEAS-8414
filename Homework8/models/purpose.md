@@ -10,7 +10,7 @@ How to Run the Script
 
     ```bash
 python updated_train_model.py
-    ```
+    ```bash
     
 Check the Output: After the script finishes running, you should find two new files in a newly created models/ subdirectory inside your app/ folder:
 
