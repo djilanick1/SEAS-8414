@@ -17,7 +17,9 @@ Input: Malicious URL features
 Output: Threat actor profile (APT, Cybercrime, Hacktivist)
 
 ## Features
-
+-   **Supervised Learning**: Binary classification of URLs as malicious/benign
+-   **Unsupervised Learning**: Threat actor attribution via clustering
+-   **GenAI Integration**: Automated response plan generation
 -   **Predictive Analytics**: Uses PyCaret to automatically train a model on a real-world phishing dataset.
 -   **Prescriptive Analytics**: Integrates with Google Gemini, OpenAI, and Grok to generate detailed incident response plans.
 -   **Interactive UI**: A user-friendly web interface built with the latest version of Streamlit.
