@@ -92,3 +92,25 @@ python 2_analyze_domain.py --domain d6w8x4z1s9q.net
 ```
 
 The script will print the final playbook to your console if a DGA is detected.
+
+
+## Project structure
+```
+.
+├── .github/
+│   └── workflows/
+│       └── lint.yml
+├── dga_env/
+│   └── ... (virtual environment files)
+├── model/
+│   └── dga_prescriptive_model.mojo
+│   └── dga_generic_model.h5
+├── data/
+│   └── dga_dataset_train.csv
+├── src/
+│   ├── 1_train_and_export.py
+│   ├── 2_analyze_domain.py
+│   ├── char_tokenizer.json
+│   └── requirements.txt
+└── README.md
+
